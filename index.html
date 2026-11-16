@@ -8,6 +8,7 @@
   <meta property="og:title" content="Sukirti Tiwari — Full-Stack Developer" />
   <meta property="og:description" content="Offline-first notes app with multi-device sync, WebRTC video meetings, RAG document assistant, ML distillation on Kubernetes." />
   <meta property="og:image" content="https://sukirti08.github.io/assets/inkpad-light.jpg" />
+  <meta property="og:url" content="https://sukirti08.github.io/" />
   <meta name="theme-color" content="#f7f6f2" media="(prefers-color-scheme: light)" />
   <meta name="theme-color" content="#111318" media="(prefers-color-scheme: dark)" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
@@ -29,6 +30,7 @@
     <a class="brand" href="#top">ST<span>.</span></a>
     <nav class="nav" aria-label="Sections">
       <a href="#projects">Projects</a>
+      <a href="#case-study">Case study</a>
       <a href="#skills">Skills</a>
       <a href="#education">Education</a>
       <a href="#contact">Contact</a>
@@ -44,38 +46,47 @@
 
   <main id="top">
     <section class="hero">
-      <p class="eyebrow">Full-stack developer · IIIT Manipur, B.Tech 2027</p>
-      <h1>Hi, I'm Sukirti. I build web apps that work end to end.</h1>
-      <p class="lead">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <p class="eyebrow reveal"><span class="status-dot"></span> Open to internships and junior roles · IIIT Manipur, B.Tech 2027</p>
+      <h1 class="reveal">Hi, I'm Sukirti. I build web apps that work <em>end to end</em>.</h1>
+      <p class="lead reveal">
         TypeScript, React and Node on one side; Java and Spring Boot on the other; Python when a model is involved.
-        Recent work: an offline-first notes app with multi-device sync, a WebRTC video-meeting app, a retrieval-augmented
-        document assistant, and an ML distillation pipeline served from Kubernetes.
+        I like the whole path from a blank repo to something a stranger can open in a browser.
       </p>
-      <div class="hero-actions">
+      <div class="hero-actions reveal">
         <a class="button primary" href="#projects">See projects</a>
-        <a class="button" href="https://github.com/Sukirti08" target="_blank" rel="noopener">GitHub</a>
-        <a class="button" href="https://linkedin.com/in/sukirti-tiwari-0b3bba2b5" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="button" href="#case-study">Read the Inkpad case study</a>
       </div>
-      <dl class="facts">
-        <div><dt>Projects shipped</dt><dd>7</dd></div>
-        <div><dt>LeetCode problems</dt><dd>150+</dd></div>
-        <div><dt>Open to</dt><dd>Internships · junior roles</dd></div>
+      <dl class="facts reveal" id="github-facts">
+        <div><dt>Public repos</dt><dd data-stat="repos">9</dd></div>
+        <div><dt>Last push</dt><dd data-stat="pushed">–</dd></div>
+        <div><dt>Live demos</dt><dd>2</dd></div>
+        <div><dt>LeetCode</dt><dd>150+ solved</dd></div>
       </dl>
     </section>
 
     <section id="projects" class="section">
-      <div class="section-head">
+      <div class="section-head reveal">
         <h2>Projects</h2>
-        <p>Each one has a README, and most have tests, CI, or a live deployment. Stars and languages load live from GitHub.</p>
+        <p>Each one has a README, and most have tests, CI or a live deployment. Languages and last-updated dates load live from GitHub.</p>
       </div>
 
-      <article class="project featured" data-repo="Sukirti08/inkpad">
+      <div class="filters reveal" role="group" aria-label="Filter projects">
+        <button type="button" class="chip active" data-filter="all">All</button>
+        <button type="button" class="chip" data-filter="typescript">TypeScript / React</button>
+        <button type="button" class="chip" data-filter="python">Python / ML</button>
+        <button type="button" class="chip" data-filter="java">Java / Spring</button>
+        <button type="button" class="chip" data-filter="live">Live demo</button>
+      </div>
+
+      <article class="project featured reveal" data-repo="Sukirti08/inkpad" data-tags="typescript">
         <div class="project-media">
           <img src="assets/inkpad-light.jpg" alt="Inkpad in light mode: sidebar, note list and editor" class="light-only" loading="lazy" />
           <img src="assets/inkpad-dark.jpg" alt="Inkpad in dark mode: sidebar, note list and editor" class="dark-only" loading="lazy" />
         </div>
         <div class="project-body">
           <header>
+            <span class="badge">Flagship</span>
             <h3>Inkpad</h3>
             <p class="project-tagline">Offline-first notes app with rich text editing and multi-device sync</p>
           </header>
@@ -87,14 +98,14 @@
           <ul class="tags"><li>TypeScript</li><li>React</li><li>TipTap</li><li>Node 24</li><li>Hono</li><li>SQLite</li><li>WebSocket</li><li>Vitest</li></ul>
           <div class="project-links">
             <a class="button small primary" href="https://github.com/Sukirti08/inkpad" target="_blank" rel="noopener">Source</a>
-            <a class="button small" href="https://github.com/Sukirti08/inkpad#how-sync-works" target="_blank" rel="noopener">How sync works</a>
+            <a class="button small" href="#case-study">Case study</a>
             <span class="repo-meta" aria-live="polite"></span>
           </div>
         </div>
       </article>
 
       <div class="project-grid">
-        <article class="project card" data-repo="Sukirti08/kd-command-parser">
+        <article class="project card reveal" data-repo="Sukirti08/kd-command-parser" data-tags="python">
           <header>
             <h3>kd-command-parser</h3>
             <p class="project-tagline">Knowledge distillation and Kubernetes deployment of a command parser</p>
@@ -107,7 +118,7 @@
           </div>
         </article>
 
-        <article class="project card" data-repo="Sukirti08/RAG">
+        <article class="project card reveal" data-repo="Sukirti08/RAG" data-tags="python">
           <header>
             <h3>AI Document Assistant</h3>
             <p class="project-tagline">Retrieval-augmented question answering with cited sources · team of two</p>
@@ -120,7 +131,7 @@
           </div>
         </article>
 
-        <article class="project card" data-repo="Sukirti08/Zoom">
+        <article class="project card reveal" data-repo="Sukirti08/Zoom" data-tags="typescript live">
           <header>
             <h3>Video Meetings</h3>
             <p class="project-tagline">Zoom-style video calls in the browser</p>
@@ -134,7 +145,7 @@
           </div>
         </article>
 
-        <article class="project card" data-repo="Sukirti08/ratemycollege">
+        <article class="project card reveal" data-repo="Sukirti08/ratemycollege" data-tags="typescript">
           <header>
             <h3>RateMyCollege</h3>
             <p class="project-tagline">College discovery platform for Indian engineering colleges</p>
@@ -147,7 +158,7 @@
           </div>
         </article>
 
-        <article class="project card" data-repo="Sukirti08/SigmaGPT">
+        <article class="project card reveal" data-repo="Sukirti08/SigmaGPT" data-tags="typescript">
           <header>
             <h3>SigmaGPT</h3>
             <p class="project-tagline">ChatGPT-style assistant with conversation history</p>
@@ -160,7 +171,7 @@
           </div>
         </article>
 
-        <article class="project card">
+        <article class="project card reveal" data-tags="java">
           <header>
             <h3>Bank Management System</h3>
             <p class="project-tagline">RESTful banking backend in Spring Boot</p>
@@ -170,43 +181,145 @@
           <div class="project-links"><span class="muted">Source available on request</span></div>
         </article>
       </div>
+      <p class="filter-empty muted" hidden>No projects match that filter yet.</p>
+    </section>
+
+    <section id="case-study" class="section">
+      <div class="section-head reveal">
+        <h2>Case study: how Inkpad syncs</h2>
+        <p>The problem every notes app with sync has: two devices edit the same note while offline, and their clocks disagree. Here is how Inkpad keeps every device consistent without a conflict dialog.</p>
+      </div>
+
+      <div class="case">
+        <figure class="diagram reveal">
+          <svg viewBox="0 0 760 330" role="img" aria-labelledby="diagram-title" xmlns="http://www.w3.org/2000/svg">
+            <title id="diagram-title">Sync flow between a laptop, the server and a phone</title>
+            <defs>
+              <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                <path d="M0 0L10 5L0 10z" fill="currentColor"/>
+              </marker>
+            </defs>
+            <g class="node" transform="translate(10,60)">
+              <rect width="170" height="120" rx="14"/>
+              <text x="85" y="34" text-anchor="middle" class="node-title">Laptop</text>
+              <text x="85" y="60" text-anchor="middle" class="node-sub">IndexedDB</text>
+              <text x="85" y="82" text-anchor="middle" class="node-sub">dirty: true</text>
+              <text x="85" y="104" text-anchor="middle" class="node-sub">updatedAt 10:02:17</text>
+            </g>
+            <g class="node server" transform="translate(295,40)">
+              <rect width="170" height="160" rx="14"/>
+              <text x="85" y="34" text-anchor="middle" class="node-title">Server</text>
+              <text x="85" y="60" text-anchor="middle" class="node-sub">SQLite</text>
+              <text x="85" y="86" text-anchor="middle" class="node-sub">version counter</text>
+              <text x="85" y="108" text-anchor="middle" class="node-mono">…, 41, 42, 43</text>
+              <text x="85" y="140" text-anchor="middle" class="node-sub">last write wins</text>
+            </g>
+            <g class="node" transform="translate(580,60)">
+              <rect width="170" height="120" rx="14"/>
+              <text x="85" y="34" text-anchor="middle" class="node-title">Phone</text>
+              <text x="85" y="60" text-anchor="middle" class="node-sub">IndexedDB</text>
+              <text x="85" y="82" text-anchor="middle" class="node-sub">cursor: 41</text>
+              <text x="85" y="104" text-anchor="middle" class="node-sub">clock 3 min behind</text>
+            </g>
+            <g class="edge">
+              <path d="M182 92 H292" marker-end="url(#arrow)"/>
+              <text x="237" y="82" text-anchor="middle">1 push dirty</text>
+            </g>
+            <g class="edge">
+              <path d="M293 152 H183" marker-end="url(#arrow)"/>
+              <text x="237" y="172" text-anchor="middle">4 pull since 43</text>
+            </g>
+            <g class="edge">
+              <path d="M467 92 H577" marker-end="url(#arrow)"/>
+              <text x="522" y="82" text-anchor="middle">2 "changed"</text>
+            </g>
+            <g class="edge">
+              <path d="M578 152 H468" marker-end="url(#arrow)"/>
+              <text x="522" y="172" text-anchor="middle">3 pull since 41</text>
+            </g>
+            <g class="note" transform="translate(10,228)">
+              <rect width="740" height="84" rx="12"/>
+              <text x="18" y="30">Pulls ask for "everything after version N", never "since time T", so a slow clock never misses a change.</text>
+              <text x="18" y="54">Two edits of one note: the newer updatedAt wins; a tie keeps the server copy, so replays are harmless.</text>
+              <text x="18" y="74" class="node-mono">push → version 44 → notify phone → phone pulls since 41 → gets 42, 43, 44</text>
+            </g>
+          </svg>
+          <figcaption>Push, notify, pull: each accepted write gets the next version number; clients only ever ask for "everything after the version I have".</figcaption>
+        </figure>
+
+        <div class="case-steps">
+          <div class="step reveal">
+            <span class="step-num">01</span>
+            <h3>Edits are local first</h3>
+            <p>A keystroke updates the store and IndexedDB within 300 ms and marks the note <code>dirty</code>. Nothing waits on the network; the app works the same offline.</p>
+          </div>
+          <div class="step reveal">
+            <span class="step-num">02</span>
+            <h3>Push, then pull by cursor</h3>
+            <p>After 800 ms of quiet the client pushes every dirty record. The server keeps the newer <code>updatedAt</code>, stamps each accepted write with a monotonic version, and the client pulls everything after the last version it saw.</p>
+          </div>
+          <div class="step reveal">
+            <span class="step-num">03</span>
+            <h3>Other devices are told, not polled</h3>
+            <p>Every signed-in tab holds a WebSocket. A push triggers a <code>changed</code> message to the user's other connections, excluding the sender, so a second device pulls within milliseconds.</p>
+          </div>
+          <div class="step reveal">
+            <span class="step-num">04</span>
+            <h3>Deletes are tombstones</h3>
+            <p>Trash sets <code>deletedAt</code> instead of removing the row, so a deletion syncs like any edit and Restore just clears it. Tested end to end: register, push, pull, conflict, per-user isolation.</p>
+          </div>
+        </div>
+      </div>
+      <p class="case-more reveal">Full write-up in the <a href="https://github.com/Sukirti08/inkpad#how-sync-works" target="_blank" rel="noopener">Inkpad README</a>.</p>
     </section>
 
     <section id="skills" class="section">
-      <div class="section-head">
+      <div class="section-head reveal">
         <h2>Skills</h2>
         <p>What I reach for, grouped by where it sits in the stack.</p>
       </div>
       <div class="skills">
-        <div class="skill-group"><h3>Languages</h3><p>TypeScript, JavaScript, Java, Python, SQL, Bash</p></div>
-        <div class="skill-group"><h3>Frontend</h3><p>React, Vite, TipTap / ProseMirror, Zustand, IndexedDB, PWA and service workers, WebRTC</p></div>
-        <div class="skill-group"><h3>Backend</h3><p>Node.js, Express, Hono, WebSocket, REST design; Spring Boot, Spring Security (JWT, OAuth2), Spring Data JPA, Hibernate; FastAPI</p></div>
-        <div class="skill-group"><h3>AI / ML</h3><p>RAG, hybrid search and reranking, LangChain and LangChain4j, vector databases (Qdrant, ChromaDB), PyTorch, knowledge distillation, LLM APIs</p></div>
-        <div class="skill-group"><h3>Data and infrastructure</h3><p>PostgreSQL, MySQL, SQLite, MongoDB, Redis, Kafka; Docker, Kubernetes (k3d), AWS (S3, EC2, Lambda), GitHub Actions, Render, Vercel</p></div>
-        <div class="skill-group"><h3>Testing and tooling</h3><p>Vitest, JUnit 5, Mockito, Zod, Postman, Swagger / OpenAPI, Git</p></div>
+        <div class="skill-group reveal"><h3>Languages</h3><p>TypeScript, JavaScript, Java, Python, SQL, Bash</p></div>
+        <div class="skill-group reveal"><h3>Frontend</h3><p>React, Vite, TipTap / ProseMirror, Zustand, IndexedDB, PWA and service workers, WebRTC</p></div>
+        <div class="skill-group reveal"><h3>Backend</h3><p>Node.js, Express, Hono, WebSocket, REST design; Spring Boot, Spring Security (JWT, OAuth2), Spring Data JPA, Hibernate; FastAPI</p></div>
+        <div class="skill-group reveal"><h3>AI / ML</h3><p>RAG, hybrid search and reranking, LangChain and LangChain4j, vector databases (Qdrant, ChromaDB), PyTorch, knowledge distillation, LLM APIs</p></div>
+        <div class="skill-group reveal"><h3>Data and infrastructure</h3><p>PostgreSQL, MySQL, SQLite, MongoDB, Redis, Kafka; Docker, Kubernetes (k3d), AWS (S3, EC2, Lambda), GitHub Actions, Render, Vercel</p></div>
+        <div class="skill-group reveal"><h3>Testing and tooling</h3><p>Vitest, JUnit 5, Mockito, Zod, Postman, Swagger / OpenAPI, Git</p></div>
       </div>
     </section>
 
+    <section id="now" class="section">
+      <div class="section-head reveal">
+        <h2>Currently building</h2>
+        <p>What's on the bench right now, so this page stays honest about where the work is.</p>
+      </div>
+      <ul class="now-list reveal">
+        <li><span class="now-tag">Inkpad</span> Public read-only share links and image attachments, then end-to-end encryption of note bodies.</li>
+        <li><span class="now-tag">Open source</span> First contributions to the libraries Inkpad depends on: TipTap, Hono, idb.</li>
+        <li><span class="now-tag">Writing</span> A post on cursor-based sync and why wall-clock timestamps are not enough.</li>
+      </ul>
+    </section>
+
     <section id="education" class="section">
-      <div class="section-head">
+      <div class="section-head reveal">
         <h2>Education</h2>
       </div>
       <ol class="timeline">
-        <li>
+        <li class="reveal">
           <div class="timeline-when">2023 – 2027</div>
           <div class="timeline-what">
             <h3>Indian Institute of Information Technology, Manipur</h3>
             <p>B.Tech in Computer Science and Engineering · CPI 7.8 · graduating April 2027</p>
           </div>
         </li>
-        <li>
+        <li class="reveal">
           <div class="timeline-when">2022</div>
           <div class="timeline-what">
             <h3>Shivam Convent, Patna</h3>
             <p>Class XII, CBSE · 80%</p>
           </div>
         </li>
-        <li>
+        <li class="reveal">
           <div class="timeline-when">2020</div>
           <div class="timeline-what">
             <h3>RPS Girls Public School, Patna</h3>
@@ -214,25 +327,26 @@
           </div>
         </li>
       </ol>
-      <p class="certs"><strong>Also:</strong> AWS Cloud Practitioner Essentials · Generative AI and LLM Fundamentals · 150+ LeetCode and 20+ GeeksforGeeks problems solved.</p>
+      <p class="certs reveal"><strong>Also:</strong> AWS Cloud Practitioner Essentials · Generative AI and LLM Fundamentals · 150+ LeetCode and 20+ GeeksforGeeks problems solved.</p>
     </section>
 
     <section id="contact" class="section contact">
-      <div class="section-head">
-        <h2>Get in touch</h2>
-        <p>Looking for a full-stack, backend or AI engineering internship or junior role. Email is the fastest way to reach me.</p>
-      </div>
-      <div class="contact-links">
-        <a class="button primary" href="mailto:sukeertitewaari@gmail.com">sukeertitewaari@gmail.com</a>
-        <a class="button" href="https://github.com/Sukirti08" target="_blank" rel="noopener">github.com/Sukirti08</a>
-        <a class="button" href="https://linkedin.com/in/sukirti-tiwari-0b3bba2b5" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="button" href="assets/Sukirti_Tiwari_Resume.pdf" download>Download resume (PDF)</a>
+      <div class="contact-card reveal">
+        <h2>Let's build something.</h2>
+        <p>Looking for a full-stack, backend or AI engineering internship or junior role. Email is the fastest way to reach me; I reply within a day.</p>
+        <div class="contact-links">
+          <a class="button primary" href="mailto:sukeertitewaari@gmail.com">sukeertitewaari@gmail.com</a>
+          <button class="button" type="button" id="copy-email" data-email="sukeertitewaari@gmail.com">Copy email</button>
+          <a class="button" href="https://github.com/Sukirti08" target="_blank" rel="noopener">GitHub</a>
+          <a class="button" href="https://linkedin.com/in/sukirti-tiwari-0b3bba2b5" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="button" href="assets/Sukirti_Tiwari_Resume.pdf" download>Resume (PDF)</a>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>© <span id="year"></span> Sukirti Tiwari · Patna, India · Built by hand with HTML and CSS, hosted on GitHub Pages.</p>
+    <p>© <span id="year"></span> Sukirti Tiwari · Patna, India · Built by hand with HTML, CSS and a little JavaScript · <a href="https://github.com/Sukirti08/Sukirti08.github.io" target="_blank" rel="noopener">Source for this site</a></p>
   </footer>
 
   <script src="script.js"></script>
