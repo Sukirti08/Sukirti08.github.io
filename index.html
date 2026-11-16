@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sukirti Tiwari — Full-Stack Developer</title>
+  <meta name="description" content="Portfolio of Sukirti Tiwari: full-stack developer building TypeScript/React/Node and Java/Spring Boot applications, with ML deployment and RAG projects." />
+  <meta property="og:title" content="Sukirti Tiwari — Full-Stack Developer" />
+  <meta property="og:description" content="Offline-first notes app with multi-device sync, WebRTC video meetings, RAG document assistant, ML distillation on Kubernetes." />
+  <meta property="og:image" content="https://sukirti08.github.io/assets/inkpad-light.jpg" />
+  <meta name="theme-color" content="#f7f6f2" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#111318" media="(prefers-color-scheme: dark)" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    try {
+      var t = localStorage.getItem("theme");
+      if (t === "dark" || (!t && matchMedia("(prefers-color-scheme: dark)").matches)) document.documentElement.dataset.theme = "dark";
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip" href="#projects">Skip to projects</a>
+
+  <header class="site-header">
+    <a class="brand" href="#top">ST<span>.</span></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a class="button small" href="assets/Sukirti_Tiwari_Resume.pdf" download>Resume</a>
+      <button class="icon-button" id="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <svg class="sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <p class="eyebrow">Full-stack developer · IIIT Manipur, B.Tech 2027</p>
+      <h1>Hi, I'm Sukirti. I build web apps that work end to end.</h1>
+      <p class="lead">
+        TypeScript, React and Node on one side; Java and Spring Boot on the other; Python when a model is involved.
+        Recent work: an offline-first notes app with multi-device sync, a WebRTC video-meeting app, a retrieval-augmented
+        document assistant, and an ML distillation pipeline served from Kubernetes.
+      </p>
+      <div class="hero-actions">
+        <a class="button primary" href="#projects">See projects</a>
+        <a class="button" href="https://github.com/Sukirti08" target="_blank" rel="noopener">GitHub</a>
+        <a class="button" href="https://linkedin.com/in/sukirti-tiwari-0b3bba2b5" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+      <dl class="facts">
+        <div><dt>Projects shipped</dt><dd>7</dd></div>
+        <div><dt>LeetCode problems</dt><dd>150+</dd></div>
+        <div><dt>Open to</dt><dd>Internships · junior roles</dd></div>
+      </dl>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="section-head">
+        <h2>Projects</h2>
+        <p>Each one has a README, and most have tests, CI, or a live deployment. Stars and languages load live from GitHub.</p>
+      </div>
+
+      <article class="project featured" data-repo="Sukirti08/inkpad">
+        <div class="project-media">
+          <img src="assets/inkpad-light.jpg" alt="Inkpad in light mode: sidebar, note list and editor" class="light-only" loading="lazy" />
+          <img src="assets/inkpad-dark.jpg" alt="Inkpad in dark mode: sidebar, note list and editor" class="dark-only" loading="lazy" />
+        </div>
+        <div class="project-body">
+          <header>
+            <h3>Inkpad</h3>
+            <p class="project-tagline">Offline-first notes app with rich text editing and multi-device sync</p>
+          </header>
+          <ul class="project-points">
+            <li>Sync protocol with a monotonic server cursor and last-write-wins merging, so devices with skewed clocks never miss or overwrite changes. Live updates over WebSocket.</li>
+            <li>Every keystroke saved to IndexedDB within 300 ms; the app shell is cached by a service worker, so it opens and works with no network.</li>
+            <li>Email/password accounts with scrypt hashing and httpOnly sessions. 18 unit and API tests run on every push.</li>
+          </ul>
+          <ul class="tags"><li>TypeScript</li><li>React</li><li>TipTap</li><li>Node 24</li><li>Hono</li><li>SQLite</li><li>WebSocket</li><li>Vitest</li></ul>
+          <div class="project-links">
+            <a class="button small primary" href="https://github.com/Sukirti08/inkpad" target="_blank" rel="noopener">Source</a>
+            <a class="button small" href="https://github.com/Sukirti08/inkpad#how-sync-works" target="_blank" rel="noopener">How sync works</a>
+            <span class="repo-meta" aria-live="polite"></span>
+          </div>
+        </div>
+      </article>
+
+      <div class="project-grid">
+        <article class="project card" data-repo="Sukirti08/kd-command-parser">
+          <header>
+            <h3>kd-command-parser</h3>
+            <p class="project-tagline">Knowledge distillation and Kubernetes deployment of a command parser</p>
+          </header>
+          <p>A 70M-parameter Pythia student distilled from a Phi-3.5-mini teacher on 3,000 labelled commands, served by FastAPI on a k3d cluster with probes, autoscaling, rolling updates and an Ingress. Latency, cost and SLO compliance measured and written up.</p>
+          <ul class="tags"><li>Python</li><li>PyTorch</li><li>FastAPI</li><li>Kubernetes</li><li>SeaweedFS</li><li>Docker</li></ul>
+          <div class="project-links">
+            <a class="button small primary" href="https://github.com/Sukirti08/kd-command-parser" target="_blank" rel="noopener">Source</a>
+            <span class="repo-meta"></span>
+          </div>
+        </article>
+
+        <article class="project card" data-repo="Sukirti08/RAG">
+          <header>
+            <h3>AI Document Assistant</h3>
+            <p class="project-tagline">Retrieval-augmented question answering with cited sources · team of two</p>
+          </header>
+          <p>Multi-format ingestion, hybrid BM25 + vector retrieval fused by reciprocal rank fusion, Cohere reranking, a Redis semantic cache, and answers streamed with numbered citations over WebSocket to a React chat UI. 92% answer relevance on a hand-labelled set.</p>
+          <ul class="tags"><li>Python</li><li>FastAPI</li><li>Qdrant</li><li>PostgreSQL</li><li>Redis</li><li>Groq</li><li>React</li></ul>
+          <div class="project-links">
+            <a class="button small primary" href="https://github.com/Sukirti08/RAG" target="_blank" rel="noopener">Source</a>
+            <span class="repo-meta"></span>
+          </div>
+        </article>
+
+        <article class="project card" data-repo="Sukirti08/Zoom">
+          <header>
+            <h3>Video Meetings</h3>
+            <p class="project-tagline">Zoom-style video calls in the browser</p>
+          </header>
+          <p>Peer-to-peer video and audio with WebRTC and a Socket.IO signalling server. Guest rooms with shareable links and no sign-up. Deployed on Render with MongoDB for accounts and meeting history.</p>
+          <ul class="tags"><li>React</li><li>WebRTC</li><li>Socket.IO</li><li>Express</li><li>MongoDB</li></ul>
+          <div class="project-links">
+            <a class="button small primary" href="https://sukirti08-zoom-demo.onrender.com" target="_blank" rel="noopener">Live demo</a>
+            <a class="button small" href="https://github.com/Sukirti08/Zoom" target="_blank" rel="noopener">Source</a>
+            <span class="repo-meta"></span>
+          </div>
+        </article>
+
+        <article class="project card" data-repo="Sukirti08/ratemycollege">
+          <header>
+            <h3>RateMyCollege</h3>
+            <p class="project-tagline">College discovery platform for Indian engineering colleges</p>
+          </header>
+          <p>Browse and compare IITs, NITs and IIITs with reviews and placement data. Google sign-in, image uploads for offer letters, and an AI assistant on the Gemini API. React front end on Vercel, Express API on Railway.</p>
+          <ul class="tags"><li>React</li><li>Express</li><li>MongoDB</li><li>Google OAuth</li><li>Gemini API</li></ul>
+          <div class="project-links">
+            <a class="button small primary" href="https://github.com/Sukirti08/ratemycollege" target="_blank" rel="noopener">Source</a>
+            <span class="repo-meta"></span>
+          </div>
+        </article>
+
+        <article class="project card" data-repo="Sukirti08/SigmaGPT">
+          <header>
+            <h3>SigmaGPT</h3>
+            <p class="project-tagline">ChatGPT-style assistant with conversation history</p>
+          </header>
+          <p>Multiple conversations stored in MongoDB, Markdown rendering with code highlighting, context limited by message count and a character budget, plus validation, rate limiting and automated tests.</p>
+          <ul class="tags"><li>React</li><li>Express</li><li>MongoDB</li><li>Groq API</li></ul>
+          <div class="project-links">
+            <a class="button small primary" href="https://github.com/Sukirti08/SigmaGPT" target="_blank" rel="noopener">Source</a>
+            <span class="repo-meta"></span>
+          </div>
+        </article>
+
+        <article class="project card">
+          <header>
+            <h3>Bank Management System</h3>
+            <p class="project-tagline">RESTful banking backend in Spring Boot</p>
+          </header>
+          <p>Deposits, withdrawals, transfers and loans behind JWT auth with three roles. Transaction events streamed through Kafka for audit logging; Hibernate fetch tuning cut transaction response time by 30%. 87% unit-test coverage, Swagger-documented.</p>
+          <ul class="tags"><li>Java</li><li>Spring Boot</li><li>Spring Security</li><li>MySQL</li><li>Kafka</li><li>JUnit</li></ul>
+          <div class="project-links"><span class="muted">Source available on request</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="section-head">
+        <h2>Skills</h2>
+        <p>What I reach for, grouped by where it sits in the stack.</p>
+      </div>
+      <div class="skills">
+        <div class="skill-group"><h3>Languages</h3><p>TypeScript, JavaScript, Java, Python, SQL, Bash</p></div>
+        <div class="skill-group"><h3>Frontend</h3><p>React, Vite, TipTap / ProseMirror, Zustand, IndexedDB, PWA and service workers, WebRTC</p></div>
+        <div class="skill-group"><h3>Backend</h3><p>Node.js, Express, Hono, WebSocket, REST design; Spring Boot, Spring Security (JWT, OAuth2), Spring Data JPA, Hibernate; FastAPI</p></div>
+        <div class="skill-group"><h3>AI / ML</h3><p>RAG, hybrid search and reranking, LangChain and LangChain4j, vector databases (Qdrant, ChromaDB), PyTorch, knowledge distillation, LLM APIs</p></div>
+        <div class="skill-group"><h3>Data and infrastructure</h3><p>PostgreSQL, MySQL, SQLite, MongoDB, Redis, Kafka; Docker, Kubernetes (k3d), AWS (S3, EC2, Lambda), GitHub Actions, Render, Vercel</p></div>
+        <div class="skill-group"><h3>Testing and tooling</h3><p>Vitest, JUnit 5, Mockito, Zod, Postman, Swagger / OpenAPI, Git</p></div>
+      </div>
+    </section>
+
+    <section id="education" class="section">
+      <div class="section-head">
+        <h2>Education</h2>
+      </div>
+      <ol class="timeline">
+        <li>
+          <div class="timeline-when">2023 – 2027</div>
+          <div class="timeline-what">
+            <h3>Indian Institute of Information Technology, Manipur</h3>
+            <p>B.Tech in Computer Science and Engineering · CPI 7.8 · graduating April 2027</p>
+          </div>
+        </li>
+        <li>
+          <div class="timeline-when">2022</div>
+          <div class="timeline-what">
+            <h3>Shivam Convent, Patna</h3>
+            <p>Class XII, CBSE · 80%</p>
+          </div>
+        </li>
+        <li>
+          <div class="timeline-when">2020</div>
+          <div class="timeline-what">
+            <h3>RPS Girls Public School, Patna</h3>
+            <p>Class X, CBSE · 95%</p>
+          </div>
+        </li>
+      </ol>
+      <p class="certs"><strong>Also:</strong> AWS Cloud Practitioner Essentials · Generative AI and LLM Fundamentals · 150+ LeetCode and 20+ GeeksforGeeks problems solved.</p>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="section-head">
+        <h2>Get in touch</h2>
+        <p>Looking for a full-stack, backend or AI engineering internship or junior role. Email is the fastest way to reach me.</p>
+      </div>
+      <div class="contact-links">
+        <a class="button primary" href="mailto:sukeertitewaari@gmail.com">sukeertitewaari@gmail.com</a>
+        <a class="button" href="https://github.com/Sukirti08" target="_blank" rel="noopener">github.com/Sukirti08</a>
+        <a class="button" href="https://linkedin.com/in/sukirti-tiwari-0b3bba2b5" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="button" href="assets/Sukirti_Tiwari_Resume.pdf" download>Download resume (PDF)</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Sukirti Tiwari · Patna, India · Built by hand with HTML and CSS, hosted on GitHub Pages.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
